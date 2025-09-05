@@ -1,0 +1,62 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Headphone Gamer Pro",
+      "description": "Som imersivo 7.1 e microfone com cancelamento de ruído. Perfeito para longas sessões de jogos.",
+      "price": "349.90",
+      "categoria": "audio",
+      "destaque": true,
+      "variants": [
+        {
+          "color": "Preto",
+          "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000&auto=format&fit=crop",
+          "stock": 15
+        },
+        {
+          "color": "Branco",
+          "imageUrl": "https://images.unsplash.com/photo-1545127398-14699f92334b?q=80&w=1000&auto=format&fit=crop",
+          "stock": 10
+        }
+      ],
+      "imageUrl": "",
+      "stock": 10
+    },
+    {
+      "id": 2,
+      "name": "Mouse Gamer Óptico",
+      "description": "Sensor de alta precisão com 16.000 DPI e iluminação RGB customizável.",
+      "price": "229.50",
+      "categoria": "perifericos",
+      "destaque": true,
+      "variants": [
+        {
+          "color": "Preto",
+          "imageUrl": "https://images.unsplash.com/photo-1615663245641-6de1362142de?q=80&w=1000&auto=format&fit=crop",
+          "stock": 30
+        },
+        {
+          "color": "RGB",
+          "imageUrl": "https://images.unsplash.com/photo-1563297007-1689810c2983?q=80&w=1000&auto=format&fit=crop",
+          "stock": 12
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Teclado Mecânico RGB",
+      "description": "Switches mecânicos duráveis, layout ABNT2 e iluminação RGB por tecla.",
+      "price": "499.00",
+      "categoria": "perifericos",
+      "destaque": false,
+      "variants": [
+        {
+          "color": "Preto",
+          "imageUrl": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?q=80&w=1000&auto=format&fit=crop",
+          "stock": 22
+        }
+      ]
+    }
+  ],
+  "orders": []
+}
