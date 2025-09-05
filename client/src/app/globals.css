@@ -1,0 +1,315 @@
+:root {
+  /* Paleta de Cores */
+  --color-primary: #0070f3;
+  --color-secondary: #ff4081;
+  --color-background: #f4f4f9;
+  --color-surface: #ffffff;
+  --color-text: #333;
+  --color-text-light: #666;
+  --color-border: #eaeaea;
+  --color-success: #28a745;
+  --color-danger: #dc3545;
+
+  /* Fontes */
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+}
+
+/* Reset Básico e Padrões Globais */
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--color-surface);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+h1, h2, h3 {
+  color: #111;
+}
+
+h1 {
+  border-bottom: 2px solid var(--color-border);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  line-height: 1.6;
+  color: var(--color-text-light);
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+/* Estilos para os Cards de Produto */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.product-card {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-card-content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.product-card-content h2 {
+  font-size: 1.25rem;
+  margin: 0 0 0.5rem;
+}
+
+.product-card-content p {
+  font-size: 0.9rem;
+  flex-grow: 1;
+  margin: 0 0 1rem;
+}
+
+.product-card-content h3 {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  margin: 0;
+  align-self: flex-end;
+}
+
+
+/* Estilos para Botões */
+button, .button-link {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+button:hover, .button-link:hover {
+  transform: scale(1.05);
+}
+
+button:active, .button-link:active {
+  transform: scale(0.98);
+}
+
+.button-primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+.button-primary:hover {
+  background-color: #005bb5;
+}
+
+.button-danger {
+  background-color: var(--color-danger);
+  color: white;
+}
+.button-danger:hover {
+  background-color: #c82333;
+}
+
+/* Estilos para a Página de Detalhes do Produto */
+.product-detail-layout {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+.product-detail-image {
+  flex: 1;
+  max-width: 400px;
+}
+.product-detail-image img {
+  width: 100%;
+  border-radius: 8px;
+}
+.product-detail-info {
+  flex: 2;
+}
+
+/* Estilos para a Página do Carrinho */
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+.cart-item-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.cart-item-details {
+  flex-grow: 1;
+}
+.cart-item-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.cart-summary {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 2px solid var(--color-border);
+  text-align: right;
+}
+
+/* Estilos para Formulários (Checkout) */
+.form-group {
+  margin-bottom: 1rem;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+/* Media Queries para Telas Menores (Celulares) */
+@media (max-width: 768px) {
+  main {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  /* Faz o layout da página de detalhes do produto ficar vertical */
+  .product-detail-layout {
+    flex-direction: column;
+  }
+
+  /* Ajusta a imagem na página de detalhes */
+  .product-detail-image {
+    max-width: 100%;
+  }
+
+  /* Ajusta os itens do carrinho para ficarem mais verticais */
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+/* === Estilos de Layout, Header e Footer === */
+
+/* Wrapper para ajudar a posicionar o footer */
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Faz o conteúdo principal ocupar o espaço disponível */
+.main-content {
+  flex: 1;
+}
+
+/* Estilos do Header */
+.site-header {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.main-nav a, .cart-link {
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.main-nav a:hover, .cart-link:hover {
+  color: var(--color-primary);
+}
+
+.cart-link {
+  background-color: #eef;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+/* Estilos do Footer */
+.site-footer {
+  background-color: #343a40;
+  color: #f8f9fa;
+  padding: 2rem;
+  text-align: center;
+  margin-top: auto; /* Empurra o footer para o final da página */
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.button-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+.button-secondary:hover {
+  background-color: #5a6268;
+}
